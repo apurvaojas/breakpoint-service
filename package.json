@@ -18,7 +18,6 @@
     "lint:ts-prod": "tslint --config tslint.prod.json packages/**/*.ts{,x}",
     "lint:ts": "run-p -c lint:ts-*",
     "lint": "run-p -c lint:*",
-    "prerelease": "yarn build",
     "release": "lerna publish",
     "tsc": "tsc",
     "pack": "lerna exec --parallel npm pack",
