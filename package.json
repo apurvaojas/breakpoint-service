@@ -1,0 +1,103 @@
+{
+  "name": "breakpoint-service",
+  "version": "0.0.0",
+  "description": "Media Breakpoint Services",
+  "main": "index.js",
+  "repository": "git@github.com:apurvaojas/media-breakpoint.git",
+  "author": "Apurva Ojas <apurvaojas10@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "lerna exec --parallel npm test",
+    "commit": "git-cz",
+    "prebuild": "lerna exec --parallel rimraf dist && run-p tsc lint",
+    "build": "lerna exec --parallel webpack",
+    "postbuild": "yarn build:declarations",
+    "fix": "run-p -c 'lint:ts-* --fix'",
+    "lint:css": "stylelint packages/**/*.ts{,x}",
+    "lint:ts-prod": "tslint --config tslint.prod.json packages/**/*.ts{,x}",
+    "lint:ts": "run-p -c lint:ts-*",
+    "lint": "run-p -c lint:*",
+    "prerelease": "yarn build",
+    "release": "lerna publish",
+    "tsc": "tsc",
+    "pack": "lerna exec --parallel npm pack",
+    "build:declarations": "lerna exec --parallel -- tsc -p ./tsconfig.build.json"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "[[ -n $HUSKY_BYPASS ]] || commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/expect-puppeteer": "^4.4.0",
+    "@types/jest": "^25.1.4",
+    "@types/jest-environment-puppeteer": "^4.3.1",
+    "@types/node": "^13.9.5",
+    "@types/puppeteer": "^2.0.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.1.0",
+    "commitizen": "^4.0.3",
+    "css-loader": "^3.4.2",
+    "cz-conventional-changelog": "3.1.0",
+    "expect-puppeteer": "^4.4.0",
+    "globby": "^11.0.0",
+    "husky": "^4.2.3",
+    "jest": "^25.2.3",
+    "jest-environment-puppeteer": "^4.4.0",
+    "jest-puppeteer": "^4.4.0",
+    "lerna": "^3.10.6",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^2.0.2",
+    "puppeteer": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^13.2.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.2",
+    "terser-webpack-plugin": "^2.3.5",
+    "ts-jest": "^25.2.1",
+    "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^3.2.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "@types/event-emitter-es6": "^1.1.0",
+    "@types/vfile-message": "^2.0.0",
+    "bootstrap": "^4.4.1",
+    "event-emitter-es6": "^1.1.5"
+  }
+}

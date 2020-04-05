@@ -1,0 +1,24 @@
+{
+  "name": "@breakpoint-service/core",
+  "version": "0.0.0",
+  "description": "Breakpoint Service Core Library",
+  "main": "./dist/breakpoint-service.core.js",
+  "types": "./dist/index.d.ts",
+  "author": "Apurva Ojas",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist",
+    "README.md",
+    "scss"
+  ],
+  "scripts": {
+    "test": "npx jest"
+  },
+  "dependencies": {
+    "@types/event-emitter-es6": "^1.1.0",
+    "@types/vfile-message": "^2.0.0",
+    "bootstrap": "^4.4.1",
+    "event-emitter-es6": "^1.1.5"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BREAKPOINT SERVICE E2E SUIT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/breakpoint-service.css" />
+    <script src="../dist/breakpoint-service.js"></script>
+  </head>
+  <body>
+    <div id="screen"></div>
+    <div id="isTouch"></div>
+  </body>
+  <script>
+    window.onload = function () {
+      if (breakpointService) {
+        breakpointService.on(breakpointService.EVENTS.onChange, function (e) {
+          document.getElementById('screen').innerText = e.screen;
+          document.getElementById('isTouch').innerText = e.isTouchDevice;
+          console.log(e);
+        });
+      }
+    };
+  </script>
+</html>

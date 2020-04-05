@@ -1,0 +1,44 @@
+@import '~bootstrap/scss/mixins/breakpoints';
+
+html {
+    &:after {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+}
+@include media-breakpoint-up(xs) { 
+    html {
+        &:after {
+            content: 'extra-small';
+        }
+    }
+}
+@include media-breakpoint-up(sm) { 
+    html {
+        &:after {
+            content: 'small';
+        }
+    }
+}
+@include media-breakpoint-up(md) { 
+    html {
+        &:after {
+            content: 'medium';
+        }
+    }
+}
+@include media-breakpoint-up(lg) { 
+    html {
+        &:after {
+            content: 'large';
+        }
+    }
+}
+@include media-breakpoint-up(xl) { 
+    html {
+        &:after {
+            content: 'extra-large';
+        }
+    }
+}
