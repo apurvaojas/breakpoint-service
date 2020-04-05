@@ -15,5 +15,8 @@
     "no-console": [true, "log", "error"],
     "no-implicit-dependencies": false,
     "interface-name": false
+  },
+  "linterOptions": {
+    "exclude": ["**/*.d.ts", "**/*.test.ts"]
   }
 }
