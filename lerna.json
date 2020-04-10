@@ -7,6 +7,7 @@
     "publish": {
       "conventionalCommits": true,
       "access": "public",
+      "message": "chore(release): Releasing Packages",
       "npmClient": "yarn",
       "allowBranch": ["master"]
     }
