@@ -13,9 +13,4 @@ const conf = {
   browserContext: 'default',
 };
 
-// if(process.platform === "win32" || process.platform === "darwin") {
-  // console.log("*******************************\n*******************************************\n\n")
-  // conf.launch.executablePath = '/usr/bin/google-chrome-stable';
-// }
-
 module.exports = conf;
