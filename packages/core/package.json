@@ -1,6 +1,6 @@
 {
   "name": "@breakpoint-service/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Breakpoint Service Core Library",
   "main": "./dist/breakpoint-service.core.js",
   "types": "./dist/index.d.ts",
