@@ -1,7 +1,11 @@
+dist: xenial
+services:
+  - xvfb
+script: xvfb-run make test
 language: node_js
 node_js:
-  - '8'
   - '10'
+  - '12'
 cache:
   yarn: true
   directories:
@@ -9,7 +13,7 @@ cache:
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s
   - export PATH="$HOME/.yarn/bin:$PATH"
-  # - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 before_script:
   - yarn build
 script:
