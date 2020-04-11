@@ -892,6 +892,16 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@breakpoint-service/core@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@breakpoint-service/core/-/core-0.1.1.tgz#1d189abd60e37ab85a79e9bb8cb752bf77a689b4"
+  integrity sha512-Yi+vUYuIv8FZir8ruvNLOTgA4xWzZdVYYdtymG44hVsvEY+++jabcQHw30t99diofo5fU9gxY35lap8jgeiItQ==
+  dependencies:
+    "@types/event-emitter-es6" "^1.1.0"
+    "@types/vfile-message" "^2.0.0"
+    bootstrap "^4.4.1"
+    event-emitter-es6 "^1.1.5"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
