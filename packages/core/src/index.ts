@@ -1,7 +1,7 @@
 import EventEmitter from 'event-emitter-es6';
 import '../scss/main.scss';
 
-interface MediaBreakpoint {
+export interface MediaBreakpoint {
   screen: string;
   isTouchDevice: boolean;
   browser: string;

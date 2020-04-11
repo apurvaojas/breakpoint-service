@@ -2,7 +2,7 @@
   "name": "@breakpoint-service/core",
   "version": "0.1.0",
   "description": "Breakpoint Service Core Library",
-  "main": "./dist/breakpoint-service.core.js",
+  "main": "./dist/breakpoint-service.js",
   "types": "./dist/index.d.ts",
   "author": "Apurva Ojas",
   "license": "MIT",

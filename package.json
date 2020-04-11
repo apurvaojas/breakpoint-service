@@ -95,8 +95,13 @@
   },
   "dependencies": {
     "@types/event-emitter-es6": "^1.1.0",
+    "@types/react": "^16.9.34",
     "@types/vfile-message": "^2.0.0",
     "bootstrap": "^4.4.1",
-    "event-emitter-es6": "^1.1.5"
+    "event-emitter-es6": "^1.1.5",
+    "react": "^16.13.1"
+  },
+  "peerDependencies": {
+    "@breakpoint-service/core": "^0.1.0"
   }
 }
