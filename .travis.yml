@@ -16,6 +16,7 @@ before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 before_script:
   - yarn build
+  - yarn build:declarations
 script:
   - yarn test
 # before_deploy:

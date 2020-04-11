@@ -12,7 +12,6 @@
     "commit": "git-cz",
     "prebuild": "lerna exec --parallel rimraf dist && run-p tsc lint",
     "build": "lerna exec --parallel webpack",
-    "postbuild": "yarn build:declarations",
     "fix": "run-p -c 'lint:ts-* --fix'",
     "lint:css": "stylelint packages/**/*.ts{,x}",
     "lint:ts-prod": "tslint --config tslint.prod.json packages/**/*.ts{,x}",
@@ -21,7 +20,7 @@
     "release": "lerna publish",
     "tsc": "tsc",
     "pack": "lerna exec --parallel npm pack",
-    "build:declarations": "lerna exec --parallel -- tsc -p ./tsconfig.build.json"
+    "build:declarations": "lerna exec -- tsc -p ./tsconfig.build.json"
   },
   "workspaces": [
     "packages/*"
@@ -99,9 +98,7 @@
     "@types/vfile-message": "^2.0.0",
     "bootstrap": "^4.4.1",
     "event-emitter-es6": "^1.1.5",
-    "react": "^16.13.1"
-  },
-  "peerDependencies": {
-    "@breakpoint-service/core": "^0.1.0"
+    "react": "^16.13.1",
+    "@breakpoint-service/core": "0.1.1"
   }
 }

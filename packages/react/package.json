@@ -1,0 +1,26 @@
+{
+  "name": "@breakpoint-service/react",
+  "version": "0.0.0",
+  "description": "Breakpoint Service React Library",
+  "main": "./dist/breakpoint-service.react.js",
+  "types": "./dist/index.d.ts",
+  "author": "Apurva Ojas",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "exit 0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
+  "dependencies": {
+    "@types/event-emitter-es6": "^1.1.0",
+    "@types/vfile-message": "^2.0.0",
+    "bootstrap": "^4.4.1",
+    "event-emitter-es6": "^1.1.5"
+  }
+}
