@@ -18,12 +18,12 @@ before_script:
   - yarn build
 script:
   - yarn test
-before_deploy:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-deploy:
-  provider: script
-  script: "yarn run release"
-  skip_cleanup: true
-  on:
-    node: "10"
-    branch: master
+# before_deploy:
+#   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+# deploy:
+#   provider: script
+#   script: "yarn run release"
+#   skip_cleanup: true
+#   on:
+#     node: "10"
+#     branch: master
